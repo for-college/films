@@ -7,11 +7,11 @@ namespace MyProjects;
 
 public class FilmsViewModel : INotifyPropertyChanged
 {
-    private static FilmsViewModel _instance;
-    public static FilmsViewModel Instance => _instance ?? (_instance = new FilmsViewModel());
+    private static FilmsViewModel? _instance;
+    public static FilmsViewModel Instance => _instance ??= new FilmsViewModel();
 
     public ObservableCollection<Film> Films { get; set; }
-    public ObservableCollection<WatchList> Watchlists => WatchlistManager.Watchlists;
+    private ObservableCollection<WatchList> Watchlists => WatchlistManager.Watchlists;
     public ICommand AddToWatchlistCommand { get; }
 
     private FilmsViewModel()
@@ -28,10 +28,9 @@ public class FilmsViewModel : INotifyPropertyChanged
 
     private async Task AddToWatchlist(Film film)
     {
-        if (film == null) return;
 
-        var action = await Application.Current.MainPage.DisplayActionSheet("Добавить в список", "Отмена", null,
-            Watchlists.Select(wl => wl.Name).ToArray());
+        var action = await Application.Current?.MainPage?.DisplayActionSheet("Добавить в список", "Отмена", null,
+            Watchlists.Select(wl => wl.Name).ToArray())!;
 
         if (action == "Отмена") return;
 
@@ -53,9 +52,9 @@ public class FilmsViewModel : INotifyPropertyChanged
         }
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
-    protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+    protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }

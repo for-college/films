@@ -4,18 +4,18 @@ namespace MyProjects;
 
 public class Review : INotifyPropertyChanged
 {
-    private string movieTitle = "";
-    private int rating;
-    private string comment = "";
+    private string _movieTitle = "";
+    private int _rating;
+    private string _comment = "";
 
     public string MovieTitle
     {
-        get => movieTitle;
+        get => _movieTitle;
         set
         {
-            if (movieTitle != value)
+            if (_movieTitle != value)
             {
-                movieTitle = value;
+                _movieTitle = value;
                 OnPropertyChanged(nameof(MovieTitle));
             }
         }
@@ -23,33 +23,29 @@ public class Review : INotifyPropertyChanged
 
     public int Rating
     {
-        get => rating;
+        get => _rating;
         set
         {
-            if (rating != value)
-            {
-                rating = value;
-                OnPropertyChanged(nameof(Rating));
-            }
+            if (_rating == value) return;
+            _rating = value;
+            OnPropertyChanged(nameof(Rating));
         }
     }
 
     public string Comment
     {
-        get => comment;
+        get => _comment;
         set
         {
-            if (comment != value)
-            {
-                comment = value;
-                OnPropertyChanged(nameof(Comment));
-            }
+            if (_comment == value) return;
+            _comment = value;
+            OnPropertyChanged(nameof(Comment));
         }
     }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
-    protected void OnPropertyChanged(string propertyName)
+    private void OnPropertyChanged(string propertyName)
     {
         PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
     }

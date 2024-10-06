@@ -1,20 +1,18 @@
 namespace MyProjects;
 
-public partial class FilmsPage : ContentPage
+public partial class FilmsPage 
 {
-    private readonly FilmsViewModel _viewModel;
-
     public FilmsPage()
     {
         InitializeComponent();
-        _viewModel = FilmsViewModel.Instance;
-        BindingContext = _viewModel;
+        var viewModel = FilmsViewModel.Instance;
+        BindingContext = viewModel;
     }
 
     private async void OnDetailsClicked(object sender, EventArgs e)
     {
         var button = sender as Button;
-        var film = button.BindingContext as Film;
+        var film = (Film)button?.BindingContext!;
         await Navigation.PushModalAsync(new FilmDetailsModalPage(film));
     }
 }

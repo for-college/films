@@ -1,4 +1,5 @@
-﻿namespace MyProjects;
+﻿
+namespace MyProjects;
 
 public partial class MainPage : ContentPage
 {

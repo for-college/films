@@ -1,8 +1,8 @@
 namespace MyProjects;
 
-public partial class ReviewsPage : ContentPage
+public partial class ReviewsPage
 {
-    public ReviewViewModel ViewModel { get; set; }
+    private ReviewViewModel ViewModel { get; set; }
 
     public ReviewsPage()
     {

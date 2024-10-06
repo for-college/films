@@ -1,3 +1,6 @@
+using System;
+using Microsoft.Maui.Controls;
+
 namespace MyProjects;
 
 public partial class FilmDetailsModalPage : ContentPage
