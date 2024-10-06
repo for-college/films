@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyProjects"
+             x:Class="MyProjects.FilmDetailsModalPage"
+             Title="Детали фильма">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:ObjectToBoolConverter x:Key="ObjectToBoolConverter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout Padding="30">
+    <Image Source="{Binding ImageUrl}"
+           WidthRequest="150"
+           HeightRequest="150"/>
+    <Label Text="{Binding Title}"
+           FontSize="24"
+           FontAttributes="Bold"/>
+    <Label Text="{Binding Genre}"
+           FontSize="18"/>
+
+    <!-- Добавляем Label для отображения имени списка -->
+    <Label Text="{Binding CurrentList.Name, StringFormat='Список: {0}'}"
+           FontSize="18"
+           TextColor="Green"
+           IsVisible="{Binding CurrentList, Converter={StaticResource ObjectToBoolConverter}}"/>
+
+    <Button Text="Закрыть"
+            Clicked="OnCloseClicked"/>
+  </StackLayout>
+
+</ContentPage>

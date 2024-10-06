@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+  x:Class="MyProjects.AppShell"
+  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+  xmlns:local="clr-namespace:MyProjects"
+  Shell.FlyoutBehavior="Disabled"
+  Title="Фильмы скуфа">
+  <TabBar>
+    <Tab>
+      <ShellContent Icon="home.svg"
+                    Title="Главная"
+                    ContentTemplate="{DataTemplate local:MainPage}"/>
+
+    </Tab>
+
+    <Tab>
+      <ShellContent Icon="films.svg"
+                    Title="Фильмы"
+                    ContentTemplate="{DataTemplate local:FilmsPage}"/>
+    </Tab>
+
+    <Tab>
+      <ShellContent Icon="lists.svg"
+                    Title="Списки"
+                    ContentTemplate="{DataTemplate local:ListsPage}"/>
+
+    </Tab>
+
+    <Tab>
+      <ShellContent Icon="reviews.svg"
+                    Title="Отзывы"
+                    ContentTemplate="{DataTemplate local:ReviewsPage}"/>
+    </Tab>
+  </TabBar>
+
+</Shell>

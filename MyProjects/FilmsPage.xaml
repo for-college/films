@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyProjects"
+             x:Class="MyProjects.FilmsPage"
+             Title="Фильмы">
+
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:ObjectToBoolConverter x:Key="ObjectToBoolConverter"/>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
+  <StackLayout Padding="30">
+    <Label Text="Мои фильмы"
+           FontSize="24"
+           Style="{StaticResource HeaderStyle}"/>
+
+    <CollectionView ItemsSource="{Binding Films}">
+      <CollectionView.ItemTemplate>
+        <DataTemplate>
+          <StackLayout Orientation="Horizontal"
+                       Padding="10"
+                       Style="{StaticResource ListItemStyle}">
+            <Image Source="{Binding ImageUrl}"
+                   WidthRequest="50"
+                   HeightRequest="50"/>
+            <Label Text="{Binding Title}"
+                   FontAttributes="Bold"
+                   VerticalOptions="Center"/>
+            <Label Text="{Binding Genre}"
+                   VerticalOptions="Center"
+                   Margin="10,0"/>
+
+            <Button
+              Text="Подробнее"
+              Clicked="OnDetailsClicked"
+              Style="{StaticResource ButtonStyle}"/>
+
+            <Button
+              Text="Добавить в список"
+              Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AddToWatchlistCommand}"
+              CommandParameter="{Binding}"
+              Style="{StaticResource ButtonStyle}"/>
+
+            <Label
+              Text="{Binding CurrentList.Name}"
+              VerticalOptions="Center"
+              Margin="10,0"
+              IsVisible="{Binding CurrentList, Converter={StaticResource ObjectToBoolConverter}}"
+              TextColor="Green"/>
+          </StackLayout>
+        </DataTemplate>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
+  </StackLayout>
+
+</ContentPage>
