@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/MyProjects.csproj": {}
+    "/Users/sf/Documents/GitHub/films/MyProjects/MyProjects.csproj": {}
   },
   "projects": {
-    "/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/MyProjects.csproj": {
+    "/Users/sf/Documents/GitHub/films/MyProjects/MyProjects.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/MyProjects.csproj",
+        "projectUniqueName": "/Users/sf/Documents/GitHub/films/MyProjects/MyProjects.csproj",
         "projectName": "MyProjects",
-        "projectPath": "/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/MyProjects.csproj",
+        "projectPath": "/Users/sf/Documents/GitHub/films/MyProjects/MyProjects.csproj",
         "packagesPath": "/Users/sf/.nuget/packages/",
-        "outputPath": "/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/obj/",
+        "outputPath": "/Users/sf/Documents/GitHub/films/MyProjects/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
@@ -23,7 +23,6 @@
           "net8.0-maccatalyst"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

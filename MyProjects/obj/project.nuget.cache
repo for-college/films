@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+mm/IOpCv6Y=",
+  "dgSpecHash": "C8YdMBN0TlE=",
   "success": true,
-  "projectFilePath": "/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/MyProjects.csproj",
+  "projectFilePath": "/Users/sf/Documents/GitHub/films/MyProjects/MyProjects.csproj",
   "expectedPackageFiles": [
     "/Users/sf/.nuget/packages/googlegson/2.10.1.4/googlegson.2.10.1.4.nupkg.sha512",
     "/Users/sf/.nuget/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
