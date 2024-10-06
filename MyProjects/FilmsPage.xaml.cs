@@ -1,6 +1,6 @@
 namespace MyProjects;
 
-public partial class FilmsPage 
+public partial class FilmsPage
 {
     public FilmsPage()
     {

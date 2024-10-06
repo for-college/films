@@ -28,7 +28,6 @@ public class FilmsViewModel : INotifyPropertyChanged
 
     private async Task AddToWatchlist(Film film)
     {
-
         var action = await Application.Current?.MainPage?.DisplayActionSheet("Добавить в список", "Отмена", null,
             Watchlists.Select(wl => wl.Name).ToArray())!;
 
