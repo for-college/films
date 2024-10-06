@@ -1,3 +1,6 @@
+/MyProjects/obj
+/MyProjects/bin
+/.idea
 /MyProjects/obj/Debug/net8.0-android/build.props
 /.idea/.idea.MyProjects/.idea/git_toolbox_prj.xml
 /.idea/.idea.MyProjects/.idea/indexLayout.xml

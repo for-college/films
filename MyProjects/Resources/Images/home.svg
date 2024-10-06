@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="Home-2--Streamline-Core.svg" height="48" width="48"><desc>Home 2 Streamline Icon: https://streamlinehq.com</desc><g id="home-2--door-entrance-home-house-roof-round-shelter"><path id="Vector" fill="#d7e0ff" d="M8.571428571428571 42.857142857142854V20.57142857142857L24 5.142857142857142 39.42857142857142 20.57142857142857v22.285714285714285h-30.857142857142854Z" stroke-width="1"></path><path id="Vector_2" stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round" d="M1.7142857142857142 27.428571428571427 24 5.142857142857142 46.285714285714285 27.428571428571427" stroke-width="1"></path><path id="Vector_3" stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round" d="M8.571428571428571 20.57142857142857v22.285714285714285h30.857142857142854V20.57142857142857" stroke-width="1"></path><path id="Vector_4" stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round" d="M24 42.857142857142854v-10.285714285714285" stroke-width="1"></path></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 48 48" id="Home-2--Streamline-Core.svg" height="48"
+     width="48">
+    <desc>Home 2 Streamline Icon: https://streamlinehq.com</desc>
+    <g id="home-2--door-entrance-home-house-roof-round-shelter">
+        <path id="Vector" fill="#d7e0ff"
+              d="M8.571428571428571 42.857142857142854V20.57142857142857L24 5.142857142857142 39.42857142857142 20.57142857142857v22.285714285714285h-30.857142857142854Z"
+              stroke-width="1"></path>
+        <path id="Vector_2" stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round"
+              d="M1.7142857142857142 27.428571428571427 24 5.142857142857142 46.285714285714285 27.428571428571427"
+              stroke-width="1"></path>
+        <path id="Vector_3" stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round"
+              d="M8.571428571428571 20.57142857142857v22.285714285714285h30.857142857142854V20.57142857142857"
+              stroke-width="1"></path>
+        <path id="Vector_4" stroke="#4147d5" stroke-linecap="round" stroke-linejoin="round"
+              d="M24 42.857142857142854v-10.285714285714285" stroke-width="1"></path>
+    </g>
+</svg>

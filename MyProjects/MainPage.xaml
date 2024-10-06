@@ -1,26 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyProjects.MainPage">
 
   <VerticalStackLayout Padding="20"
-      HeightRequest="300">
+                       HeightRequest="300">
     <Label Text="Фильмы"
-        FontSize="32"
-        HorizontalOptions="Center"
-        Style="{StaticResource HeaderStyle}"/>
+           FontSize="32"
+           HorizontalOptions="Center"
+           Style="{StaticResource HeaderStyle}" />
     <Button
       Padding="10"
       HorizontalOptions="Center"
       Text="Просмотреть фильмы"
       Clicked="OnViewMoviesClicked"
-      Style="{StaticResource ButtonStyle}"/>
+      Style="{StaticResource ButtonStyle}" />
 
     <Button
       HorizontalOptions="Center"
       Padding="10"
       Text="Мои списки"
       Clicked="OnMyListsClicked"
-      Style="{StaticResource ButtonStyle}"/>
+      Style="{StaticResource ButtonStyle}" />
   </VerticalStackLayout>
 </ContentPage>

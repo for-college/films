@@ -1,20 +1,19 @@
-﻿namespace MyProjects
+﻿namespace MyProjects;
+
+public partial class MainPage : ContentPage
 {
-  public partial class MainPage : ContentPage
-  {
     public MainPage()
     {
-      InitializeComponent();
+        InitializeComponent();
     }
 
     private async void OnViewMoviesClicked(object sender, EventArgs e)
     {
-      await Navigation.PushAsync(new FilmsPage());
+        await Navigation.PushAsync(new FilmsPage());
     }
 
     private async void OnMyListsClicked(object sender, EventArgs e)
     {
-      await Navigation.PushAsync(new ListsPage());
+        await Navigation.PushAsync(new ListsPage());
     }
-  }
 }

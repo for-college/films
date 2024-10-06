@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyProjects.ReviewsPage"
@@ -6,22 +7,22 @@
 
   <StackLayout Padding="30">
     <Label Text="Оставить отзыв"
-        FontSize="24"
-        Style="{StaticResource HeaderStyle}"/>
+           FontSize="24"
+           Style="{StaticResource HeaderStyle}" />
     <Editor x:Name="CommentEditor"
-        Placeholder="Ваш отзыв"/>
+            Placeholder="Ваш отзыв" />
     <HorizontalStackLayout Padding="20">
-      <Label Text="Оценка: "/>
+      <Label Text="Оценка: " />
       <Label BindingContext="{x:Reference RatingSlider}"
-          Text="{Binding Value}"/>
+             Text="{Binding Value}" />
     </HorizontalStackLayout>
     <Slider x:Name="RatingSlider"
-        Minimum="1"
-        Maximum="5"
-        ValueChanged="OnSliderValueChanged"/>
+            Minimum="1"
+            Maximum="5"
+            ValueChanged="OnSliderValueChanged" />
     <Button Text="Отправить отзыв"
-        Clicked="OnSubmitReviewClicked"
-        Style="{StaticResource ButtonStyle}"/>
+            Clicked="OnSubmitReviewClicked"
+            Style="{StaticResource ButtonStyle}" />
   </StackLayout>
 
 </ContentPage>

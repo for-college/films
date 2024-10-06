@@ -1,42 +1,42 @@
-﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MyProjects"
              x:Class="MyProjects.App">
-    <Application.Resources>
-        <ResourceDictionary>
-            <!-- Стили заголовков -->
-            <Style x:Key="HeaderStyle"
-                    TargetType="Label">
-                <Setter Property="FontSize"
-                        Value="24"/>
-                <Setter Property="FontAttributes"
-                        Value="Bold"/>
-                <Setter Property="TextColor"
-                        Value="#34495E"/>
-            </Style>
+  <Application.Resources>
+    <ResourceDictionary>
+      <!-- Стили заголовков -->
+      <Style x:Key="HeaderStyle"
+             TargetType="Label">
+        <Setter Property="FontSize"
+                Value="24" />
+        <Setter Property="FontAttributes"
+                Value="Bold" />
+        <Setter Property="TextColor"
+                Value="#34495E" />
+      </Style>
 
-            <!-- Стили кнопок -->
-            <Style x:Key="ButtonStyle"
-                    TargetType="Button">
-                <Setter Property="BackgroundColor"
-                        Value="#E74C3C"/>
-                <Setter Property="TextColor"
-                        Value="White"/>
-                <Setter Property="CornerRadius"
-                        Value="20"/>
-            </Style>
+      <!-- Стили кнопок -->
+      <Style x:Key="ButtonStyle"
+             TargetType="Button">
+        <Setter Property="BackgroundColor"
+                Value="#E74C3C" />
+        <Setter Property="TextColor"
+                Value="White" />
+        <Setter Property="CornerRadius"
+                Value="20" />
+      </Style>
 
-            <!-- Стили элементов списка -->
-            <Style x:Key="ListItemStyle"
-                    TargetType="StackLayout">
-                <Setter Property="BackgroundColor"
-                        Value="#F8F9F9"/>
-                <Setter Property="Padding"
-                        Value="10"/>
-                <Setter Property="Margin"
-                        Value="0,0,0,5"/>
-            </Style>
-        </ResourceDictionary>
-    </Application.Resources>
+      <!-- Стили элементов списка -->
+      <Style x:Key="ListItemStyle"
+             TargetType="StackLayout">
+        <Setter Property="BackgroundColor"
+                Value="#F8F9F9" />
+        <Setter Property="Padding"
+                Value="10" />
+        <Setter Property="Margin"
+                Value="0,0,0,5" />
+      </Style>
+    </ResourceDictionary>
+  </Application.Resources>
 </Application>

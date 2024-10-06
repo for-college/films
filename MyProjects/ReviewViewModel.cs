@@ -1,12 +1,11 @@
-﻿namespace MyProjects
+﻿namespace MyProjects;
+
+public class ReviewViewModel
 {
-  public class ReviewViewModel
-  {
     public Review Review { get; set; }
 
     public ReviewViewModel()
     {
-      Review = new Review();
+        Review = new Review();
     }
-  }
 }

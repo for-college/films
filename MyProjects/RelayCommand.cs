@@ -1,9 +1,9 @@
 ﻿using System.Windows.Input;
 
-namespace MyProjects
+namespace MyProjects;
+
+public class RelayCommand : ICommand
 {
-  public class RelayCommand : ICommand
-  {
     private readonly Action<object> execute;
     private readonly Func<object, bool> canExecute;
 
@@ -11,14 +11,22 @@ namespace MyProjects
 
     public RelayCommand(Action<object> execute, Func<object, bool> canExecute = null)
     {
-      this.execute = execute;
-      this.canExecute = canExecute;
+        this.execute = execute;
+        this.canExecute = canExecute;
     }
 
-    public bool CanExecute(object parameter) => canExecute == null || canExecute(parameter);
+    public bool CanExecute(object parameter)
+    {
+        return canExecute == null || canExecute(parameter);
+    }
 
-    public void Execute(object parameter) => execute(parameter);
+    public void Execute(object parameter)
+    {
+        execute(parameter);
+    }
 
-    public void RaiseCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
-  }
+    public void RaiseCanExecuteChanged()
+    {
+        CanExecuteChanged?.Invoke(this, EventArgs.Empty);
+    }
 }
