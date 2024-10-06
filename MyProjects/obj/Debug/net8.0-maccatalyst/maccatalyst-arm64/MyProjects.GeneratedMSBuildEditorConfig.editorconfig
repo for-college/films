@@ -1,0 +1,71 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0-maccatalyst
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyProjects
+build_property.ProjectDir = /Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/FilmDetailsModalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.FilmDetailsModalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = FilmDetailsModalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = FilmDetailsModalPage.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/FilmsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.FilmsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = FilmsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = FilmsPage.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/ListsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.ListsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ListsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ListsPage.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
+
+[/Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/ReviewsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyProjects.ReviewsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = ReviewsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = ReviewsPage.xaml

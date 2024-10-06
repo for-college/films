@@ -1,0 +1,1 @@
+-v --force --timestamp=none --sign - --entitlements /Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/obj/Debug/net8.0-maccatalyst/maccatalyst-arm64/Entitlements.xcent /Users/sf/Downloads/Telegram Desktop/MyProjects/MyProjects/bin/Debug/net8.0-maccatalyst/maccatalyst-arm64/MyProjects.app
