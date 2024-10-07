@@ -9,51 +9,83 @@
   <ContentPage.Resources>
     <ResourceDictionary>
       <local:ObjectToBoolConverter x:Key="ObjectToBoolConverter" />
+      <Style x:Key="CardStyle" TargetType="Frame">
+        <Setter Property="Margin" Value="10" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="HasShadow" Value="True" />
+        <Setter Property="BackgroundColor" Value="#F0F0F0" />
+      </Style>
+      <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#4CAF50" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="Margin" Value="5" />
+      </Style>
     </ResourceDictionary>
   </ContentPage.Resources>
 
-  <StackLayout Padding="30">
-    <Label Text="Мои фильмы"
-           FontSize="24"
-           Style="{StaticResource HeaderStyle}" />
+  <ScrollView>
+    <StackLayout Padding="30">
+      <Label Text="Мои фильмы"
+             FontSize="24"
+             Style="{StaticResource HeaderStyle}" />
 
-    <CollectionView ItemsSource="{Binding Films}">
-      <CollectionView.ItemTemplate>
-        <DataTemplate>
-          <StackLayout Orientation="Horizontal"
-                       Padding="10"
-                       Style="{StaticResource ListItemStyle}">
-            <Image Source="{Binding ImageUrl}"
-                   WidthRequest="50"
-                   HeightRequest="50" />
-            <Label Text="{Binding Title}"
-                   FontAttributes="Bold"
-                   VerticalOptions="Center" />
-            <Label Text="{Binding Genre}"
-                   VerticalOptions="Center"
-                   Margin="10,0" />
+      <CollectionView ItemsSource="{Binding Films}">
+        <CollectionView.ItemTemplate>
+          <DataTemplate>
+            <Frame Margin="20" Style="{StaticResource CardStyle}">
+              <Grid Padding="10" RowSpacing="8">
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                  <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-            <Button
-              Text="Подробнее"
-              Clicked="OnDetailsClicked"
-              Style="{StaticResource ButtonStyle}" />
+                <Image Source="{Binding ImageUrl}"
+                       WidthRequest="300"
+                       HeightRequest="300"
+                       Grid.Row="0" />
 
-            <Button
-              Text="Добавить в список"
-              Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AddToWatchlistCommand}"
-              CommandParameter="{Binding}"
-              Style="{StaticResource ButtonStyle}" />
+                <Label Text="{Binding Title}"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       Grid.Row="1" />
 
-            <Label
-              Text="{Binding CurrentList.Name}"
-              VerticalOptions="Center"
-              Margin="10,0"
-              IsVisible="{Binding CurrentList, Converter={StaticResource ObjectToBoolConverter}}"
-              TextColor="Green" />
-          </StackLayout>
-        </DataTemplate>
-      </CollectionView.ItemTemplate>
-    </CollectionView>
-  </StackLayout>
+                <Label Text="{Binding Genre}"
+                       VerticalOptions="Center"
+                       Margin="10,0"
+                       Grid.Row="2" />
 
+                <Button
+                  Text="Подробнее"
+                  Clicked="OnDetailsClicked"
+                  Style="{StaticResource ButtonStyle}"
+                  Grid.Row="3" />
+
+                <Button
+                  Text="Добавить в список"
+                  Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.AddToWatchlistCommand}"
+                  CommandParameter="{Binding}"
+                  Style="{StaticResource ButtonStyle}"
+                  Grid.Row="4" />
+
+                <Label
+                  Text="{Binding CurrentList.Name}"
+                  VerticalOptions="Center"
+                  Margin="10,0"
+                  IsVisible="{Binding CurrentList, Converter={StaticResource ObjectToBoolConverter}}"
+                  TextColor="Green"
+                  Grid.Row="5" />
+              </Grid>
+            </Frame>
+          </DataTemplate>
+        </CollectionView.ItemTemplate>
+      </CollectionView>
+    </StackLayout>
+  </ScrollView>
 </ContentPage>

@@ -8,7 +8,7 @@ namespace MyProjects;
 
 public class ListsViewModel : INotifyPropertyChanged
 {
-    private static ListsViewModel _instance;
+    private static ListsViewModel? _instance;
     public static ListsViewModel Instance => _instance ?? (_instance = new ListsViewModel());
 
     public ObservableCollection<WatchList> Watchlists => WatchlistManager.Watchlists;
@@ -32,6 +32,11 @@ public class ListsViewModel : INotifyPropertyChanged
             if (list.Movies.Remove(film))
                 if (film.CurrentList == list)
                     film.CurrentList = null;
+    }
+
+    public void CreateNewList(string listName)
+    {
+        Watchlists.Add(new WatchList { Name = listName });
     }
 
     public event PropertyChangedEventHandler PropertyChanged;

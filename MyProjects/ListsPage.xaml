@@ -5,6 +5,25 @@
              x:Class="MyProjects.ListsPage"
              Title="Списки">
 
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Style x:Key="CategoryStyle" TargetType="Frame">
+        <Setter Property="BackgroundColor" Value="#F0F0F0" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="HasShadow" Value="True" />
+        <Setter Property="Margin" Value="0,0,0,20" />
+      </Style>
+      <Style x:Key="ButtonStyle" TargetType="Button">
+        <Setter Property="BackgroundColor" Value="#4CAF50" />
+        <Setter Property="TextColor" Value="White" />
+        <Setter Property="CornerRadius" Value="5" />
+        <Setter Property="HeightRequest" Value="40" />
+        <Setter Property="Margin" Value="5" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
   <StackLayout Padding="30">
     <Label Text="Мои списки"
            FontSize="24"
@@ -13,37 +32,41 @@
     <CollectionView ItemsSource="{Binding Watchlists}">
       <CollectionView.ItemTemplate>
         <DataTemplate>
-          <StackLayout Padding="10"
-                       Style="{StaticResource ListItemStyle}">
-            <Label Text="{Binding Name}"
-                   FontAttributes="Bold"
-                   FontSize="18" />
+          <Frame Style="{StaticResource CategoryStyle}">
+            <Frame.GestureRecognizers>
+              <PointerGestureRecognizer PointerEntered="OnPointerEntered" PointerExited="OnPointerExited" />
+            </Frame.GestureRecognizers>
+            <StackLayout>
+              <Label Text="{Binding Name}"
+                     FontAttributes="Bold"
+                     FontSize="18" />
 
-            <CollectionView ItemsSource="{Binding Movies}">
-              <CollectionView.ItemTemplate>
-                <DataTemplate>
-                  <StackLayout Orientation="Horizontal"
-                               Padding="5">
-                    <Image Source="{Binding ImageUrl}"
-                           WidthRequest="50"
-                           HeightRequest="50" />
-                    <Label Text="{Binding Title}"
-                           FontAttributes="Bold"
-                           VerticalOptions="Center" />
-                    <Label Text="{Binding Genre}"
-                           VerticalOptions="Center"
-                           Margin="10,0" />
+              <CollectionView ItemsSource="{Binding Movies}">
+                <CollectionView.ItemTemplate>
+                  <DataTemplate>
+                    <StackLayout Orientation="Horizontal"
+                                 Padding="5">
+                      <Image Source="{Binding ImageUrl}"
+                             WidthRequest="50"
+                             HeightRequest="50" />
+                      <Label Text="{Binding Title}"
+                             FontAttributes="Bold"
+                             VerticalOptions="Center" />
+                      <Label Text="{Binding Genre}"
+                             VerticalOptions="Center"
+                             Margin="10,0" />
 
-                    <Button
-                      Text="Удалить"
-                      Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoveFromListCommand}"
-                      CommandParameter="{Binding}"
-                      Style="{StaticResource ButtonStyle}" />
-                  </StackLayout>
-                </DataTemplate>
-              </CollectionView.ItemTemplate>
-            </CollectionView>
-          </StackLayout>
+                      <Button
+                        Text="Удалить"
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.RemoveFromListCommand}"
+                        CommandParameter="{Binding}"
+                        Style="{StaticResource ButtonStyle}" />
+                    </StackLayout>
+                  </DataTemplate>
+                </CollectionView.ItemTemplate>
+              </CollectionView>
+            </StackLayout>
+          </Frame>
         </DataTemplate>
       </CollectionView.ItemTemplate>
     </CollectionView>
